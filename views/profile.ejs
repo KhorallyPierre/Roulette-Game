@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+
+<head>
+  <title> Roulette</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="page-header text-center">
+      <h1><span class="fa fa-anchor"></span> Profile Page</h1>
+      <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+
+      <!-- LOCAL INFORMATION -->
+      <div class="col-sm-6">
+        <div class="well">
+          <h3><span class="fa fa-user"></span> Welcome ChairMan</h3>
+
+          <% if (user.local.email) { %>
+          <p>
+            <strong>id</strong>: <%= user._id %><br>
+            <strong>email</strong>: <%= user.local.email %><br>
+            <strong>password</strong>: <%= user.local.password %>
+          </p>
+
+          <a href="/unlink/local" class="btn btn-default">Unlink</a>
+          <% } else { %>
+          <a href="/connect/local" class="btn btn-default">Connect Local</a>
+          <% } %>
+
+        </div>
+      </div>
+      <div class="layout col-sm-6">
+        <h3> Betting Records (Confidential)</h3>
+        <ul class="messages">
+          <% let casinoWonSum = 0
+          let casinoLostSum = 0
+          for(let i = 0; i<transactions.length; i++) {
+            console.log(transactions[i])
+            casinoWonSum = casinoWonSum + transactions[i].casinoWon
+            casinoLostSum = casinoLostSum + transactions[i].casinoLost
+            %>
+          <li class="message">
+            <section "orders">
+              <section>
+                <span class="details"> Customer Name: </span><span class="data"><%= transactions[i].name %></span>
+              </section>
+
+              <section>
+                <span class="details"> Casino Won: </span><span class="data"><%= transactions[i].casinoWon %></span>
+              </section>
+
+              <section>
+                <span class="details"> Casino Lost: </span><span class="data"><%= transactions[i].casinoLost %></span>
+              </section>
+
+              <section>
+                <span class="details"> Color Chosen: </span><span class="data"><%= transactions[i].color %></span>
+              </section>
+
+              <section>
+                <span class="details"> Amount Bet: </span><span class="data"><%= transactions[i].bet %></span>
+              </section>
+
+              <section>
+                <span class="details"> Time: </span> <span class="data"><%= transactions[i].timeStamp %></span>
+              </section>
+
+
+
+
+
+            </section>
+
+
+
+          </li>
+          <% } %>
+        </ul>
+
+      </div>
+
+      <section class="summary">
+        <section>
+          <span class="summaryWon"> Casino's Total Wins: </span><span class=""><%= casinoWonSum  %></span>
+        </section>
+
+        <section>
+          <span class="summaryLost"> Casino's Total Losses: </span><span class=""><%= casinoLostSum %></span>
+        </section>
+
+      </section>
+
+      <script src="profile.js"></script>
+
+</body>
+
+</html>

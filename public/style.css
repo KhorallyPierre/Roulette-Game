@@ -1,0 +1,156 @@
+body {
+  padding-top: 20px;
+  word-wrap: break-word;
+  background-image: linear-gradient(#54101c,#e7b54f);
+  height: 1000px;
+}
+
+img {
+  height: 200px;
+}
+
+.details {
+  color: red;
+  font-size: 20px;
+  width: 90%;
+  position: inherit;
+}
+
+.data {
+  font-size: 20px;
+  color: orange;
+  width: 40%;
+  position: inherit;
+}
+
+#wheel {
+  position: relative;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+}
+
+#wheel::before {
+  content: "";
+  background-image: url(img/wheel.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  transform: rotate(43deg);
+  z-index: 0;
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  border: 1px solid yellow;
+  transition: all 4s ease;
+  left: 40%;
+  top: 41%;
+}
+
+#ball {
+  border-radius: 50%;
+  background-image: url(img/ball.png);
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 65%;
+  left: 62%;
+  transform: translate(-50%, -50%);
+}
+
+.orders {
+  padding-bottom: 20px;
+}
+
+.summary {
+  position: absolute;
+  color: red;
+  height: 100px;
+  top: 500px;
+  bottom: 500px;
+  font-size: 20px;
+  padding: 20px;
+  padding-bottom: 30px;
+  border: solid black;
+  border-radius: 5%;
+}
+
+div.layout {
+  height: 80rem;
+  overflow-y: scroll;
+}
+
+.message {
+      padding: 10px;
+      border: solid black;
+      border-radius: 5%;
+      margin: 8px;
+}
+.ui{
+  position: absolute;
+  top: 9%;
+  left: 82%;
+  transform: translate(-50%, -50%);
+  color: antiquewhite;
+}
+.spinbuttons{
+  position: absolute;
+  top: 23%;
+  left: 78%;
+  transform: translate(-50%, -50%);
+}
+.casino {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 50px;
+  background: red;
+
+}
+
+#jumbotron {
+  width: 20%;
+  border-radius: 5%;
+  margin: 20px;
+}
+
+#jumbo {
+  width: 20%;
+  border-radius: 5%;
+  margin: 20px;
+  padding: 0px;
+  background: rgba(79, 128, 180, .5);
+  color: white;
+}
+
+.mainsec {
+  background: url(img/background.jpeg);
+  background-size: 1500px 1000px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1500px;
+  height: 1000px;
+  border: 10px solid #cc9033;
+}
+
+#value {
+  color: green;
+  text-decoration-color: white;
+
+}
+
+#name, #moneyBet, #colorInput {
+      padding: 10px;
+      border-radius: 10%;
+}
+
+button {
+  padding: 5px;
+  border-radius: 10%;
+}
