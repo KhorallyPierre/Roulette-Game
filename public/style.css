@@ -37,15 +37,26 @@ img {
 }
 
 .details {
-  color: red;
+  color: darkblue;
   font-size: 20px;
   width: 90%;
   position: inherit;
+  font-family: 'Montserrat', sans-serif;
 }
 
+.summaryWon, .money, .welcomeC{
+  color: darkblue;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.summaryLost {
+  color: darkblue;
+  font-family: 'Montserrat', sans-serif;
+}
 .data {
   font-size: 20px;
-  color: orange;
+  color: black;
   width: 40%;
   position: inherit;
 }
@@ -329,5 +340,20 @@ button {
 }
 
 .zoom {
-  zoom: 1.2;
+  zoom: 1.0;
+}
+
+#centerThis {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  color: darkblue;
+}
+
+#styleThat {
+  color: darkblue;
+}
+
+#well2 {
+  background-color: #b76868;
 }
