@@ -1,7 +1,7 @@
 # Roulette-Game
 
 
-Welcome to my Roulette Game!
+Welcome to my Roulette Game! Bet some money and see what your results are! If you're a casino admin, log in and discover the casino's total wins and losses. Click [here](https://limitless-oasis-91117.herokuapp.com/) for the deployed version.
 
 ![Roulette Game](background2.jpg)
 
