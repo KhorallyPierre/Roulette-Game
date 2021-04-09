@@ -11,7 +11,7 @@ var style = document.createElement("style");
 document.head.appendChild(style)
 sheet = style.sheet
 
-document.querySelector('button').addEventListener('click', playGame)
+document.querySelector('.spinButton').addEventListener('click', playGame)
 
 let board = {
   0: "green",
@@ -131,6 +131,36 @@ function playGame() {
     })
   }
 }
+
+// minus & plus buttons
+
+document.querySelector('.plus').addEventListener('click', ()=>{
+  let bet = parseFloat(document.querySelector('#moneyBet').value)
+  if(bet >= 0 ){
+    bet+= 100
+    document.querySelector('#moneyBet').value = bet
+  }else{
+    document.querySelector('#moneyBet').value = 0
+  }
+})
+
+document.querySelector('.minus').addEventListener('click', ()=>{
+  let bet = parseFloat(document.querySelector('#moneyBet').value)
+  if(parseFloat(document.querySelector('#moneyBet').value) <= 0 ){
+    alert("Sorry, no negative bets!")
+    document.querySelector('#moneyBet').value = 0
+  }else
+  if(bet >= 0 ){
+    bet-= 100
+    document.querySelector('#moneyBet').value = bet
+  }else{
+    document.querySelector('#moneyBet').value = 0
+  }
+})
+
+
+
+
 
 /// rotation
 

@@ -1,7 +1,7 @@
 # Roulette-Game
 
 
-Welcome to my Code Lyoko fan site! Here, users can pretend to be Lyoko warriors fighting Xana. Log in to unlock your very first mission against a Xana Attack.
+Welcome to my Roulette Game!
 
 ![Roulette Game](background2.jpg)
 
